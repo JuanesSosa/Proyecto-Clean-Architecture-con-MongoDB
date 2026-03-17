@@ -5,7 +5,9 @@ export default class CreateProduct {
     this.productRepository = productRepository;
   }
 
-  async execute(productData) {
-    return await this.productRepository.create(productData);
-  }
+ async execute(productData) {
+  const product = new Product(productData);
+  return await this.productRepository.save(product);
+}
+
 }

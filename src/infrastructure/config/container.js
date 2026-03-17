@@ -10,6 +10,7 @@ const repository = new MongoProductRepository();
 
 
 const createProduct = new CreateProduct(repository);
+
 const getAllProducts = new GetAllProducts(repository);
 
 
